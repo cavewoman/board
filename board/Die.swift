@@ -11,8 +11,8 @@ import Foundation
 class Die: NSObject, NSCoding {
   var color: NSString?
   var brains: NSNumber = 0
-  var bangs: NSNumber = 0
   var steps: NSNumber = 0
+  var bangs: NSNumber = 0
   
   override init() {
     super.init()
@@ -32,6 +32,26 @@ class Die: NSObject, NSCoding {
     aCoder.encodeObject(bangs, forKey: "bangs")
     aCoder.encodeObject(steps, forKey: "steps")
     aCoder.encodeObject(color, forKey: "color")
+  }
+  
+  func roll(die: Die) -> NSString {
+    let options: NSMutableArray = []
+    
+    for _ in 0...(brains as Int) {
+      options.addObject("brain")
+    }
+    
+    for _ in 0...(steps as Int) {
+      options.addObject("step")
+    }
+    
+    for _ in 0...(bangs as Int) {
+      options.addObject("bang")
+    }
+    
+    let randomIndex = Int(arc4random_uniform(UInt32(options.count)))
+    let side = options[randomIndex]
+    return side as! NSString
   }
   
 }
