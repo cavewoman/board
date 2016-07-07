@@ -9,6 +9,7 @@
 import Foundation
 
 class Die: NSObject, NSCoding {
+  var color: NSString?
   var brains: NSNumber = 0
   var bangs: NSNumber = 0
   var steps: NSNumber = 0
@@ -22,6 +23,7 @@ class Die: NSObject, NSCoding {
     self.brains = aDecoder.decodeObjectForKey("brains") as? NSNumber ?? 0
     self.bangs = aDecoder.decodeObjectForKey("bangs") as? NSNumber ?? 0
     self.steps = aDecoder.decodeObjectForKey("steps") as? NSNumber ?? 0
+    self.color = aDecoder.decodeObjectForKey("color") as! NSString?
     super.init()
   }
   
@@ -29,6 +31,7 @@ class Die: NSObject, NSCoding {
     aCoder.encodeObject(brains, forKey: "brains")
     aCoder.encodeObject(bangs, forKey: "bangs")
     aCoder.encodeObject(steps, forKey: "steps")
+    aCoder.encodeObject(color, forKey: "color")
   }
   
 }
