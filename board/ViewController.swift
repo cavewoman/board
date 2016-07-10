@@ -21,7 +21,6 @@ class ViewController: UIViewController {
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    //if segue.identifier == "ShowPickedDice" {
       let pickedDiceVC = segue.destinationViewController as? PickedDiceViewController
       
       var bag = Bag()
@@ -32,24 +31,13 @@ class ViewController: UIViewController {
         dice = bag.dice!
       }
       
-      let picked = Bag.pickDice(bag)
+      let picked = bag.pickDice(3)
+      NSLog("Picked \(picked)")
       pickedDiceVC?.dice = picked
-      
-    //}
+      pickedDiceVC?.bag = bag
   }
 
-  @IBAction func dicePicker(sender: UIButton) {
-    var bag = Bag()
-    var dice = bag.allDice()
-    
-    if dice.count < 1 {
-      bag = Bag().createDefaultBag()
-      dice = bag.dice!
-    }
-    
-    let picked = Bag.pickDice(bag)
-    
-  }
+  @IBAction func dicePicker(sender: UIButton) {}
 
 }
 

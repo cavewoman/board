@@ -16,6 +16,8 @@
 		95ED4ECE1D2DD95A00D20CC7 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED4ECD1D2DD95A00D20CC7 /* Bag.swift */; };
 		95ED4ED01D2DDAC400D20CC7 /* Die.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED4ECF1D2DDAC400D20CC7 /* Die.swift */; };
 		95ED4ED21D2E81CC00D20CC7 /* PickedDiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED4ED11D2E81CC00D20CC7 /* PickedDiceViewController.swift */; };
+		95FAB3731D328BEB00950B40 /* RolledResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FAB3721D328BEB00950B40 /* RolledResultViewController.swift */; };
+		95FAB3751D32A28500950B40 /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FAB3741D32A28500950B40 /* Turn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		95ED4ECD1D2DD95A00D20CC7 /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		95ED4ECF1D2DDAC400D20CC7 /* Die.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Die.swift; sourceTree = "<group>"; };
 		95ED4ED11D2E81CC00D20CC7 /* PickedDiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickedDiceViewController.swift; sourceTree = "<group>"; };
+		95FAB3721D328BEB00950B40 /* RolledResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RolledResultViewController.swift; sourceTree = "<group>"; };
+		95FAB3741D32A28500950B40 /* Turn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				95ED4ECD1D2DD95A00D20CC7 /* Bag.swift */,
 				95ED4ECF1D2DDAC400D20CC7 /* Die.swift */,
 				95ED4ED11D2E81CC00D20CC7 /* PickedDiceViewController.swift */,
+				95FAB3721D328BEB00950B40 /* RolledResultViewController.swift */,
+				95FAB3741D32A28500950B40 /* Turn.swift */,
 			);
 			path = board;
 			sourceTree = "<group>";
@@ -152,6 +158,8 @@
 				95ED4EB81D2DD1DC00D20CC7 /* board.xcdatamodeld in Sources */,
 				95ED4ED01D2DDAC400D20CC7 /* Die.swift in Sources */,
 				95ED4EB01D2DD1DC00D20CC7 /* AppDelegate.swift in Sources */,
+				95FAB3731D328BEB00950B40 /* RolledResultViewController.swift in Sources */,
+				95FAB3751D32A28500950B40 /* Turn.swift in Sources */,
 				95ED4ED21D2E81CC00D20CC7 /* PickedDiceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +310,7 @@
 				95ED4EC31D2DD1DC00D20CC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

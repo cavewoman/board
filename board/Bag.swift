@@ -33,13 +33,13 @@ class Bag: NSObject {
     saveDice([])
   }
   
-  func pickDice(num: NSNumber) -> [Die] {
+  func pickDice(num: Int) -> [Die] {
     var bag = allDice()
     var picked: [Die] = []
     
     var i = 0
     
-    while i < bag.count && bag.count > 0 {
+    while i < num && bag.count > 0 {
       let randomIndex = Int(arc4random_uniform(UInt32(bag.count)))
       let die = bag[randomIndex]
       picked.append(die)
@@ -56,15 +56,15 @@ class Bag: NSObject {
     let bag = Bag()
     var dice: [Die] = []
 
-    for _ in 0...6 {
+    for _ in 0...7 {
       dice.append(createGreenDie())
     }
     
-    for _ in 0...4 {
+    for _ in 0...5 {
       dice.append(createYellowDie())
     }
     
-    for _ in 0...2 {
+    for _ in 0...3 {
       dice.append(createRedDie())
     }
     saveDice(dice)

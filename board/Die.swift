@@ -37,15 +37,15 @@ class Die: NSObject, NSCoding {
   func roll(die: Die) -> NSString {
     let options: NSMutableArray = []
     
-    for _ in 0...(brains as Int) {
+    for _ in 0...((brains as Int) + 1) {
       options.addObject("brain")
     }
     
-    for _ in 0...(steps as Int) {
+    for _ in 0...((steps as Int) + 1) {
       options.addObject("step")
     }
     
-    for _ in 0...(bangs as Int) {
+    for _ in 0...((bangs as Int) + 1) {
       options.addObject("bang")
     }
     
