@@ -25,6 +25,7 @@ class Die: NSObject, NSCoding {
     self.bangs = aDecoder.decodeObjectForKey("bangs") as? NSNumber ?? 0
     self.steps = aDecoder.decodeObjectForKey("steps") as? NSNumber ?? 0
     self.color = aDecoder.decodeObjectForKey("color") as! NSString?
+    self.chances = aDecoder.decodeObjectForKey("chances") as? Chance
     super.init()
   }
   
@@ -33,6 +34,7 @@ class Die: NSObject, NSCoding {
     aCoder.encodeObject(bangs, forKey: "bangs")
     aCoder.encodeObject(steps, forKey: "steps")
     aCoder.encodeObject(color, forKey: "color")
+    aCoder.encodeObject(chances, forKey: "chances")
   }
   
   func roll(die: Die) -> NSString {
