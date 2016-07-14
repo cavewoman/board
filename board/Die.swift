@@ -13,6 +13,7 @@ class Die: NSObject, NSCoding {
   var brains: NSNumber = 0
   var steps: NSNumber = 0
   var bangs: NSNumber = 0
+  var chances: Chance?
   
   override init() {
     super.init()
@@ -53,5 +54,6 @@ class Die: NSObject, NSCoding {
     let side = options[randomIndex]
     return side as! NSString
   }
+  
   
 }

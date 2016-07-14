@@ -9,9 +9,10 @@
 import Foundation
 
 class Turn: NSObject, NSCoding {
-  var bag: Bag = Bag()
-  var brains: NSNumber = 0
-  var bangs: NSNumber = 0
+  var bag: Bag = Bag().createDefaultBag()
+  var playerNumber: Int = 0
+  var brains: Int = 0
+  var bangs: Int = 0
   
   override init() {
     super.init()
@@ -19,8 +20,9 @@ class Turn: NSObject, NSCoding {
   
   required init?(coder aDecoder: NSCoder) {
     self.bag = (aDecoder.decodeObjectForKey("bag") as! Bag?)!
-    self.brains = aDecoder.decodeObjectForKey("brains") as? NSNumber ?? 0
-    self.bangs = aDecoder.decodeObjectForKey("bangs") as? NSNumber ?? 0
+    self.playerNumber = aDecoder.decodeObjectForKey("playerNumber") as? Int ?? 0
+    self.brains = aDecoder.decodeObjectForKey("brains") as? Int ?? 0
+    self.bangs = aDecoder.decodeObjectForKey("bangs") as? Int ?? 0
     super.init()
   }
   

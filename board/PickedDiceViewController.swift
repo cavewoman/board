@@ -11,6 +11,7 @@ import UIKit
 class PickedDiceViewController: UIViewController {
   var dice: [Die] = []
   var bag: Bag?
+  var turn: Turn?
   
   @IBOutlet weak var dieOneLabel: UILabel!
   @IBOutlet weak var dieTwoLabel: UILabel!
@@ -40,16 +41,20 @@ class PickedDiceViewController: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     let rolledResultVC = segue.destinationViewController as? RolledResultViewController
     
-    var results: [String] = []
+    var results: [Result] = []
     
     for die in dice {
-      let result = die.roll(die)
-      results.append(result as String)
+      let result = Result()
+      result.result = die.roll(die) as String
+      result.die = die
+      
+      results.append(result)
     }
     
     NSLog("Results \(results)")
     
     rolledResultVC?.results = results
+    rolledResultVC?.turn = turn
   }
   
 

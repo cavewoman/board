@@ -78,6 +78,8 @@ class Bag: NSObject {
     greenDie.brains = 3
     greenDie.steps = 2
     greenDie.bangs = 1
+    greenDie.chances = calcChances(greenDie)
+    
     return greenDie
   }
   
@@ -87,6 +89,7 @@ class Bag: NSObject {
     yellowDie.brains = 2
     yellowDie.steps = 2
     yellowDie.bangs = 2
+    yellowDie.chances = calcChances(yellowDie)
     return yellowDie
   }
   
@@ -96,7 +99,15 @@ class Bag: NSObject {
     redDie.brains = 2
     redDie.steps = 2
     redDie.bangs = 2
+    redDie.chances = calcChances(redDie)
     return redDie
+  }
+  
+  func calcChances(die: Die) -> Chance {
+    let chances = Chance()
+    chances.brains = Double(die.brains)/6
+    chances.bangs = Double(die.bangs)/6
+    return chances
   }
   
   func encodeWithCoder(aCoder: NSCoder) {
